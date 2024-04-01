@@ -1,0 +1,21 @@
+.aboutUs {
+  &__wrapper {
+    padding: 225px 0;
+    background-color: #111;
+  }
+
+  &__img {
+    border-radius: 50%;
+    border: #ff0000 1px solid;
+    box-shadow: #ff0000 5px 5px 45px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 556px) {
+
+    &__wrapper {
+      padding: 25px 0 40px  ;
+    }
+
+  }
+}

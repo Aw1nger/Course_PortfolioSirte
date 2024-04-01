@@ -1,31 +1,70 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import "./header.scss";
+import { Link } from "react-router-dom";
 import { NavLink } from "../../components/Links/links";
 
 const Header = () => {
+  const path = window.location.pathname;
   return (
-    <header className="header">
-      <div className="header__wrapper">
-        <div className="container d-flex justify-content-between navbar-expand-lg">
-          <div className="header__logo" onClick={() => window.scrollTo(0, 0)}>
-            <img src="" alt="" className="header__logo-img" />
-            <h3 className="header__title">Aw1nger</h3>
+    <header className="header shadow sticky-top">
+      <Navbar expand="xl">
+        <div
+          className="container"
+          itemScope
+          itemType="http://www.schema.org/SiteNavigationElement"
+        >
+          <div className="header__logo">
+            {path === "/" ? (
+              <img
+                src={process.env.PUBLIC_URL + "/image/aw1nger_logo.png"}
+                alt="logo"
+                className="header__logo-img"
+              />
+            ) : (
+              <Link to="/">
+                <img
+                  src={process.env.PUBLIC_URL + "/image/aw1nger_logo.png"}
+                  alt="logo"
+                  className="header__logo-img"
+                />
+              </Link>
+            )}
           </div>
-          <div className="">
-            <Navbar.Toggle aria-controls="header-nav">PYK</Navbar.Toggle>
-            <Navbar.Collapse id="header-nav">
-              <nav className="header__nav">
-                <ul className="header__nav-list">
-                  <li className="header__nav-item">
-                    <NavLink to="/">PYK</NavLink>
-                  </li>
-                </ul>
-              </nav>
-            </Navbar.Collapse>
-          </div>
+          <Navbar.Toggle
+            className="header__navbar-btn d-block d-xl-none"
+            aria-controls="HeaderNavId"
+          >
+            <i className="fa fa-outdent" aria-hidden="true"></i>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="HeaderNavId" className="justify-content-end">
+            <div className="d-xl-flex justify-content-between">
+              <ul className="header__navbar navbar-nav m-3 m-xl-0">
+                <li className="nav-item">
+                  <NavLink to="/" itemProp="url">
+                    Обо Mнe
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/" itemProp="url">
+                    Сервис
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/" itemProp="url">
+                    Работы
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/" itemProp="url">
+                    Свяжись со Mной
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </Navbar.Collapse>
         </div>
-      </div>
+      </Navbar>
     </header>
   );
 };

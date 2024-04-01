@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Main = () => {
+const MainBlock: React.FC<React.HTMLProps<HTMLDivElement>> = (props) => {
   return (
-    <div>
-      
-    </div>
+    <main className={`main ${props.className}`} {...props}>
+      <div className="main__wrapper">
+        {props.children}
+      </div>
+    </main>
   );
 };
 
-export default Main;
+export default MainBlock;

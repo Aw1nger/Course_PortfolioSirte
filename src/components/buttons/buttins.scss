@@ -1,0 +1,17 @@
+.myBtn {
+  padding: 13px 30px !important;
+  color: #fff !important;
+  background-color: #ff0000 !important;
+  border-radius: 25px 4px !important ;
+  transition: all .5s !important;
+}
+
+.myBtn:hover {
+  box-shadow: #fff 0 0 25px;
+  background-color: #ff0000;
+  transition: all .5s;
+}
+
+.myBtn:focus {
+  background-color: #e00000 !important;
+}

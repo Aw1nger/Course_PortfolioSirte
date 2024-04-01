@@ -1,4 +1,4 @@
-.link {
+.navLink {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -8,8 +8,22 @@
   transition: all .5s;
 }
 
-.link:hover {
-  text-decoration: underline;
-  color: #04FFFB;
+.navLink:hover {
+  border-bottom: #ff0000 3px solid;
+  color: #ff0000;
+  text-shadow: #ff0000 0px 0px 20px;
+  transition: all .5s;
+}
+
+.socLink {
+  font-size: 45px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: all .5s;
+}
+
+.socLink:hover {
+  text-shadow: #ff0000 0px 0px 20px;
   transition: all .5s;
 }

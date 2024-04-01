@@ -10,12 +10,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #122B5B;
+  background-color: #a00000;
   border-radius: 6px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #0A162E;
+  background-color: #3d0000;
 }
 
 #root {
@@ -37,11 +37,21 @@ body::-webkit-scrollbar-track {
   transition: .5s;
 }
 
+.container {
+  max-width: 1575px;
+}
+
+.red {
+  color: #FF0000;
+}
+
+.red-shadow {
+  text-shadow: #ff0000 0 0 25px;
+}
+
 li {
   list-style: none;
 }
-
-
 
 p {
   font-weight: 400;
@@ -62,4 +72,14 @@ h1,
 h2 {
   font-weight: 700;
   font-size: 80px;
+}
+
+@media (max-width: 556px) {
+
+  h1,
+  h2 {
+    font-weight: 700;
+    font-size: 42px;
+  }
+  
 }
